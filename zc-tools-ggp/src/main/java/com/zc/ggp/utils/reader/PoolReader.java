@@ -36,15 +36,6 @@ public class PoolReader {
         File file = new File("D:\\Develop\\Project\\zc-tools\\zc-tools-ggp\\source\\鹿可幸运礼物奖池.xlsx");
         MultiTableListener listener = new MultiTableListener();
         // 读取 Excel 文件
-        EasyExcel.read(file, listener).sheet().doRead();
-        // 处理读取到的多个 table 数据
-        List<List<Map<Integer, String>>> tables = listener.getTables();
-        for (int i = 0; i < tables.size(); i++) {
-            List<Map<Integer, String>> table = tables.get(i);
-            System.out.println("Table " + (i + 1) + " data:");
-            for (Map<Integer, String> row : table) {
-                System.out.println(row);
-            }
-        }
+        EasyExcel.read(file, LuckyPool.class,listener).headRowNumber(3).sheet().doRead();
     }
 }
