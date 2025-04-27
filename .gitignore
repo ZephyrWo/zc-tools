@@ -52,3 +52,4 @@ Thumbs.db
 
 ### Mac OS ###
 .DS_Store
+/zc-tools-format/src/test/
