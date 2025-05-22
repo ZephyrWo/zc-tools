@@ -11,6 +11,7 @@
 
     <modules>
         <module>zc-tools-ggp</module>
+        <module>zc-tools-client</module>
     </modules>
 
     <properties>
